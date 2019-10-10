@@ -1,0 +1,21 @@
+{
+  "source": [
+    "aws.s3"
+  ],
+  "detail-type": [
+    "AWS API Call via CloudTrail"
+  ],
+  "detail": {
+    "eventSource": [
+      "s3.amazonaws.com"
+    ],
+    "eventName": [
+      "PutObject",
+      "CompleteMultipartUpload"
+    ],
+    "resources": {
+      "ARN": [
+        "arn:aws:s3:::${codebuild_bucket}/${name}/${name}.zip"
+      ]
+    }
+  }
