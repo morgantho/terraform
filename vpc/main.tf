@@ -4,8 +4,12 @@ provider "aws" {
 }
 
 terraform {
-  # The configuration for this backend will be filled in by Terragrunt
-  backend "s3" {}
+  backend "s3" {
+    bucket = "${var.remote_state_bucket}"
+    key = "${var.remote_state_key}"
+    region = "${var.remote_state_region}"
+    dynamodb_table = "${var.dynamodb_table}"
+  }
 }
 
 
