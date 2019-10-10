@@ -10,6 +10,10 @@ variable "remote_state_key" {
   description = "State file path"
 }
 
+variable "remote_state_region" {
+  description = "Remote State region"
+}
+
 variable "dynamodb_table" {
   default = "DynamoDB table for state locking"
 }
